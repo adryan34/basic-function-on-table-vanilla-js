@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+
+
+    <table>
+        <caption>Products information</caption>
+        <thead>
+            <tr>
+                <th scope="col">Nume produs</th>
+                <th scope="col">Pret</th>
+                <th scope="col">Cantitate</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody class="produse-container">
+            <tr class="trow">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="actions-buttons">
+
+                    <div>
+                        <i class="fa-regular fa-trash ">
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+ 
+
+    <section class="add-container">
+        <legend><span class="number">1</span> Add produs</legend>
+        <label for="Nume">Nume:</label>
+        <input type="text" id="nume" name="nume">
+        <label for="Pret">Pret:</label>
+        <input type="text" id="pret" name="pret">
+        <label for="cantitate">Cantitate:</label>
+        <input type="number" id="cantitate" name="cantitate" />
+        <button class="add" title="Adauga inregistrare"> Adauga inregistrare </button>
+    </section>
+
+    
+    <div>
+        <button id="sortareid">Sortare dupa pret</button>
+    </div>
+
+
+    <script src="data.js"></script>
+    <script src="functions.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
