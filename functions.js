@@ -24,7 +24,7 @@ function createRow(produs) {
             <button class="btn-delete ${produs.nume}">
                 delete
             </button>
-            <button class="btn-edit ${produs.nume} ${produs.pret} ${produs.cantitate}"  >
+            <button class="btn-edit ${produs.nume}"  >
                 edit
             </button>
           </td>
@@ -125,4 +125,21 @@ function validateCantitate(cantitate) {
         valid: true
     };
 
+}
+
+
+
+function returneazaIndexProdusByName(nume) {
+    for(let i = 0; i < data.length; i++) {
+        if(data[i].nume ===nume) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+function editProdus(produs) {
+    let poz=returneazaIndexProdusByName(produs.nume);
+    data[poz].pret=produs.pret;
+    data[poz].cantitate=produs.cantitate;
 }

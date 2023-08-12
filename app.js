@@ -50,15 +50,18 @@ tableContainer.addEventListener("click", (event) => {
 
 
     let obj = event.target;
+    let classList = obj.classList;
     if (obj.classList.contains("btn-delete")) {
-        let classList = obj.classList;
-
-
-        console.log(obj);
-
         stergereByNume(classList[1]);
-
         ataseazaProduse();
+    }else if(obj.classList.contains("btn-edit")){
+        let produs=getProdusByName(classList[1]);
+
+        inputNume.value=produs.nume;
+        inputPret.value=produs.pret;
+        inputCantitate.value=produs.cantitate;
+        
+
     }
 
 
@@ -66,14 +69,18 @@ tableContainer.addEventListener("click", (event) => {
 
 tableContainer.addEventListener("click", (e) => {
     let obj = e.target;
-    if (obj.classList.contains("btn-edit")) {
-        let classList = obj.classList;
+    if(obj.classList.contains("btn-edit")){
         
-        inputNume.value = classList[1];
-        inputPret.value = classList[2];
-        inputCantitate.value = classList[3];
         
-}})
+        // let p = {
+        //         nume: inputNume.value,
+        //         pret: inputPret.value,
+        //         cantitate: inputCantitate.value
+        // };
+        // editProdus(p);
+        // ataseazaProduse();
+    }
+})
 
 let sortareButton = document.querySelector("#sortareid");
     
